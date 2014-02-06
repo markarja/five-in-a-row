@@ -1,0 +1,44 @@
+body {
+	margin: 0;	
+	background-color: rgb(30,30,30);
+	color: rgb(255,255,255);
+	font-family: helvetica;
+	font-size: 14px;
+	font-weight: lighter;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.playingfield {
+	width: 100%;
+	height:100%;
+	border-spacing: 0px;	
+	padding: 0px;	
+	border-collapse: collapse;
+}
+
+.cell {
+	background-color: rgb(200,200,200);
+	text-align: center;
+	vertical-align: center;	
+	padding: 0px;
+	border: 1px solid rgb(30,30,30);
+}
+
+.status {
+	padding: 10px;	
+	background-repeat: no-repeat;
+	background-image: url(res/information.png);
+	padding-left: 30px;
+}
+
+.buttons {
+	padding-top: 5px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.piece {
+	width: 12px;
+	height: 12px;	
+}
