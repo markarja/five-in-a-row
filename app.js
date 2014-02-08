@@ -14,7 +14,7 @@ var ERROR_AUDIO = "res/error.mp3";
 
 var COUNT = 5;
 var gameover = false;
-var audio = true;
+var audio = false;
 
 function init() {
 	
