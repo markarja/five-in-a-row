@@ -119,6 +119,7 @@ function check(player) {
 	for(var i = 0;i < 10;i++) {
 		if(count == COUNT) break;
 		count = 0;
+		ids = Array();
 		for(var j = 0;j < 10;j++) {
 			if(candidate == document.getElementById(i + "" + j).src) {
 				count++;
@@ -147,6 +148,7 @@ function check(player) {
 		for(var i = 0;i < 10;i++) {
 			if(count == COUNT) break;
 			count = 0;
+			ids = Array();
 			for(var j = 0;j < 10;j++) {
 				if(candidate == document.getElementById(j + "" + i).src) {
 					count++;
@@ -178,6 +180,7 @@ function check(player) {
 		for(var i = 3;i < 10;i++) {
 			if(count == COUNT) break;
 			count = 0;
+			ids = Array();
 			var j = i;
 			var k = 0;
 			while(j >= 0) {
@@ -213,6 +216,7 @@ function check(player) {
 		for(var i = 1;i < 10;i++) {
 			if(count == COUNT) break;
 			count = 0;
+			ids = Array();
 			var k = i;
 			j = 9;
 			while(j >= i) {
@@ -248,6 +252,7 @@ function check(player) {
 		for(var i = 0;i < 10;i++) {
 			if(count == COUNT) break;
 			count = 0;
+			ids = Array();
 			var j = i;
 			var k = 0;
 			while(j < 10) {
@@ -283,6 +288,7 @@ function check(player) {
 		for(var i = 1;i < 10;i++) {
 			if(count == COUNT) break;
 			count = 0;
+			ids = Array();
 			var k = i;
 			j = 0;
 			while(j < 10 - i) {
