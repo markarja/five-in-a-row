@@ -7,137 +7,149 @@
 	    <meta name="apple-mobile-web-app-capable" content="yes">
 	 	<link rel="stylesheet" href="style.css" type="text/css">
 		<title>Five in a row</title>
+		<!-- <script src="phonegap.js"></script> -->
 		<script src="app.js"></script>
 	</head>
-	<body onload="init();">
+	<body onload="init(false);">
 		<div id="status" class="status">
-		</div>		
+		</div>	
+		<div id="timer" class="timer">
+			<img id="timerimage" src="res/timer.5.png" />
+		</div>	
 		<table class="playingfield">
 			<tr id="r0">
 				<td class="cell"><img id="00" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="01" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="01" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="02" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="03" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="03" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="04" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="05" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="05" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="06" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="07" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="07" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="08" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="09" onclick="select(this.id)" src="res/placeholder.png" /></td>	
+				<td class="cell white"><img id="09" onclick="select(this.id)" src="res/placeholder.png" /></td>	
 			</tr>
 			<tr id="r1">
-				<td class="cell"><img id="10" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="10" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="11" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="12" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="12" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="13" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="14" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="14" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="15" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="16" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="16" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="17" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="18" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="18" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="19" onclick="select(this.id)" src="res/placeholder.png" /></td>
 			</tr>
 			<tr id="r2">
 				<td class="cell"><img id="20" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="21" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="21" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="22" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="23" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="23" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="24" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="25" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="25" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="26" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="27" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="27" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="28" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="29" onclick="select(this.id)" src="res/placeholder.png" /></td>	
+				<td class="cell white"><img id="29" onclick="select(this.id)" src="res/placeholder.png" /></td>	
 			</tr>
 			<tr id="r3">
-				<td class="cell"><img id="30" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="30" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="31" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="32" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="32" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="33" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="34" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="34" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="35" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="36" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="36" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="37" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="38" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="38" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="39" onclick="select(this.id)" src="res/placeholder.png" /></td>	
 			</tr>
 			<tr id="r4">
 				<td class="cell"><img id="40" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="41" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="41" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="42" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="43" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="43" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="44" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="45" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="45" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="46" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="47" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="47" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="48" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="49" onclick="select(this.id)" src="res/placeholder.png" /></td>	
+				<td class="cell white"><img id="49" onclick="select(this.id)" src="res/placeholder.png" /></td>	
 			</tr>
 			<tr id="r5">
-				<td class="cell"><img id="50" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="50" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="51" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="52" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="52" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="53" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="54" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="54" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="55" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="56" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="56" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="57" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="58" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="58" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="59" onclick="select(this.id)" src="res/placeholder.png" /></td>
 			</tr>
 			<tr id="r6">
 				<td class="cell"><img id="60" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="61" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="61" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="62" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="63" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="63" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="64" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="65" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="65" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="66" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="67" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="67" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="68" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="69" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="69" onclick="select(this.id)" src="res/placeholder.png" /></td>
 			</tr>
 			<tr id="r7">
-				<td class="cell"><img id="70" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="70" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="71" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="72" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="72" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="73" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="74" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="74" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="75" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="76" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="76" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="77" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="78" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="78" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="79" onclick="select(this.id)" src="res/placeholder.png" /></td>	
 			</tr>
 			<tr id="r8">
 				<td class="cell"><img id="80" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="81" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="81" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="82" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="83" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="83" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="84" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="85" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="85" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="86" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="87" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="87" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="88" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="89" onclick="select(this.id)" src="res/placeholder.png" /></td>	
+				<td class="cell white"><img id="89" onclick="select(this.id)" src="res/placeholder.png" /></td>	
 			</tr>
 			<tr id="r9">
-				<td class="cell"><img id="90" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="90" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="91" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="92" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="92" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="93" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="94" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="94" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="95" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="96" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="96" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="97" onclick="select(this.id)" src="res/placeholder.png" /></td>
-				<td class="cell"><img id="98" onclick="select(this.id)" src="res/placeholder.png" /></td>
+				<td class="cell white"><img id="98" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell"><img id="99" onclick="select(this.id)" src="res/placeholder.png" /></td>	
 			</tr>
 		</table>
 		<div class="buttons">
-			<img src="res/refresh.png" onclick="init();" /> <img id="toggleAudioButton" src="res/sound.png" onclick="toggleAudio(this.src);" />
+			<img src="res/user.png" onclick="dialog(true);" /> <img src="res/refresh.png" onclick="init(true);" /> <img id="toggleAudioButton" src="res/sound.png" onclick="toggleAudio(this.src);" />
 		</div>
 		<input id="player" type="hidden" value="1" />
+		<div id="dialog" class="dialog">
+			<span id="dialogtitle" class="dialogtitle">Name your players</span>
+			<p><img src="res/grey.png" class="player" /> <span>player: </span><input id="p1" type="text" value="player 1" style="width:65%" /></p>
+			<p><img src="res/black.png" class="player" /> <span>player: </span><input id="p2" type="text" value="player 2" style="width:65%" /></p>
+			<p style="text-align: right; padding-right: 20px;"><img onclick="dialog(false);" src="res/arrow.right.png"></p>
+		</div>
+		<div id="overlay" class="overlay">
+		</div>
 		<audio id="audioplayer">
 			<source id="clip" src="res/place.mp3" type="audio/mp3" />
 		</audio>
