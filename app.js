@@ -375,8 +375,12 @@
 			var audio = document.getElementById("audioplayer");
 			if(device.platform == "Android") {
 				audio = new Media("/android_asset/www/" + audioSource, onAudioSuccess, onAudioError);
+				audio.play();	
+				audio.release();
+			} else {
+				audio.play();
 			}
-			audio.play();	
+			
 		}
 	}
 	
