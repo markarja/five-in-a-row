@@ -362,8 +362,6 @@
 		}
 	}
 	
-	function onAudioSuccess() { }
-	
 	function onAudioError() {
 		alert("code: " + error.code + "\n" + 
 	          "message: " + error.message + "\n");
@@ -374,9 +372,10 @@
 			document.getElementById("audioplayer").src = audioSource;
 			var audio = document.getElementById("audioplayer");
 			if(device.platform == "Android") {
-				audio = new Media("/android_asset/www/" + audioSource, onAudioSuccess, onAudioError);
+				audio = new Media("/android_asset/www/" + audioSource, 
+						function() { audio.release(); }
+						, onAudioError);
 				audio.play();	
-				audio.release();
 			} else {
 				audio.play();
 			}
