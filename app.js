@@ -63,12 +63,14 @@
 	}
 	
 	function toggleAudio(src) {
-		if(src.indexOf("sound.png") > -1) {
-			audio = false;
-			document.getElementById("toggleAudioButton").src = AUDIO_MUTED;
-		} else {
-			audio = true;
-			document.getElementById("toggleAudioButton").src = AUDIO_ON;
+		if(document.getElementById("dialog").style.visibility == "hidden") {
+			if(src.indexOf("sound.png") > -1) {
+				audio = false;
+				document.getElementById("toggleAudioButton").src = AUDIO_MUTED;
+			} else {
+				audio = true;
+				document.getElementById("toggleAudioButton").src = AUDIO_ON;
+			}
 		}
 	}
 	
@@ -105,7 +107,7 @@
 	}
 	
 	function select(id) {
-		if(!gameover) {
+		if(!gameover && document.getElementById("dialog").style.visibility == "hidden") {
 			startTimer();
 		 	if(document.getElementById(id).src.indexOf(EMPTY) > -1) {
 				if(document.getElementById("player").value == 1) {
