@@ -41,7 +41,7 @@
 
 	<!-- Core plugins -->
     <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.media" version="0.2.8" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
