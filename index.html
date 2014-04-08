@@ -16,7 +16,7 @@
 		<div id="timer" class="timer">
 			<img id="timerimage" src="res/timer.5.png" />
 		</div>	
-		<table class="playingfield">
+		<table class="playingfield" id="playingfield">
 			<tr id="r0">
 				<td class="cell"><img id="00" onclick="select(this.id)" src="res/placeholder.png" /></td>
 				<td class="cell white"><img id="01" onclick="select(this.id)" src="res/placeholder.png" /></td>
@@ -138,14 +138,14 @@
 				<td class="cell"><img id="99" onclick="select(this.id)" src="res/placeholder.png" /></td>	
 			</tr>
 		</table>
-		<div class="buttons">
+		<div class="buttons" id="buttons">
 			<img src="res/user.png" onclick="dialog(true);" /> <img src="res/refresh.png" onclick="init(true);" /> <img id="toggleAudioButton" src="res/sound.png" onclick="toggleAudio(this.src);" />
 		</div>
 		<input id="player" type="hidden" value="1" />
 		<div id="dialog" class="dialog">
 			<span id="dialogtitle" class="dialogtitle">Name your players</span>
-			<p><img src="res/grey.png" class="player" /> <span>player: </span><input id="p1" type="text" value="player 1" style="width:65%" /></p>
-			<p><img src="res/black.png" class="player" /> <span>player: </span><input id="p2" type="text" value="player 2" style="width:65%" /></p>
+			<p><img src="res/grey.png" class="player" /> <span id="p1label">player: </span><input id="p1" type="text" value="player 1" style="width:65%" /></p>
+			<p><img src="res/black.png" class="player" /> <span id="p2label">player: </span><input id="p2" type="text" value="player 2" style="width:65%" /></p>
 			<p style="text-align: right; padding-right: 20px;"><img onclick="dialog(false);" src="res/arrow.right.png"></p>
 		</div>
 		<div id="overlay" class="overlay">

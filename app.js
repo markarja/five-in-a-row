@@ -35,7 +35,11 @@
 			}
 		}
 
-		document.getElementById("status").innerHTML = "Welcome to Five in a row!";
+		document.getElementById("status").innerHTML = "Welcome to Five in a row! " +
+		"<p>A two-player puzzle game. The goal is to assemble 5 pieces in a straight line either horizontally, " +
+		"vertically or diagonally. You have 5 seconds time to place your piece, otherwise the turn is passed to " + 
+		"the other player. The first player to place 5 pieces in a straight line wins! " + 
+		"<p>If you like this game, please write a review to help develop it further. Have fun!</p>";
 		
 		if(start) {
 			
@@ -79,10 +83,12 @@
 			if(imageIndex > 0) {
 				playAudio(TIMER_AUDIO, audio);
 				document.getElementById("timerimage").src = "res/timer." + imageIndex + ".png";
+				document.getElementById("status").style.backgroundColor = "rgb(30,30,30)";
 				imageIndex--;
 			} else {
 				playAudio(TIMER_RESTART_AUDIO, audio);
 				document.getElementById("timerimage").src = "res/timer.alert.png";
+				document.getElementById("status").style.backgroundColor = "rgb(255,0,0)";
 				window.clearInterval(interval);
 				var timeout = window.setTimeout(function () {
 					document.getElementById("player").value = (document.getElementById("player").value == 1) ? 2 : 1;
@@ -99,8 +105,8 @@
 	}
 	
 	function select(id) {
-		startTimer();
 		if(!gameover) {
+			startTimer();
 		 	if(document.getElementById(id).src.indexOf(EMPTY) > -1) {
 				if(document.getElementById("player").value == 1) {
 					document.getElementById(id).src = GREY;
@@ -371,14 +377,14 @@
 		if(audio) {
 			document.getElementById("audioplayer").src = audioSource;
 			var audio = document.getElementById("audioplayer");
-			if(device.platform == "Android") {
+			/*if(device.platform == "Android") {
 				audio = new Media("/android_asset/www/" + audioSource, 
 						function() { audio.release(); }
 						, onAudioError);
 				audio.play();	
-			} else {
+			} else {*/
 				audio.play();
-			}
+			//}
 			
 		}
 	}
@@ -396,7 +402,13 @@
 				return;
 			}
 			document.getElementById("dialog").style.visibility = "hidden";
+			document.getElementById("dialog").style.top = "120px";
 			document.getElementById("overlay").style.visibility = "hidden";
+			document.getElementById("status").style.visibility = "visible";
+			document.getElementById("timer").style.visibility = "visible";
+			document.getElementById("playingfield").style.visibility = "visible";
+			document.getElementById("buttons").style.visibility = "visible";
+			
 			init(true);
 		} else {
 			document.getElementById("dialog").style.visibility = "visible";
