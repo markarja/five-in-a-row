@@ -89,7 +89,7 @@ body {
 
 .timer {
 	position: fixed;
-	top: 60px; 
+	top: 55px; 
 	right: 0px;	
 	visibility: hidden;
 }
