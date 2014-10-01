@@ -22,7 +22,7 @@
 	
 	function init(start) {
 		
-		var height = window.innerHeight - 100;
+		var height = window.innerHeight - 100 - 55;
 		height = Math.floor(height / 10);
 		
 		for(var i = 0;i < 10;i++) {
@@ -378,14 +378,20 @@
 	function playAudio(audioSource, audio) {
 		if(audio) {
 			document.getElementById("audioplayer").src = audioSource;
-			var audio = document.getElementById("audioplayer");
-			if(device.platform == "Android") {
-				audio = new Media("/android_asset/www/" + audioSource, 
-						function() { audio.release(); }
-						, onAudioError);
-				audio.play();	
+			var audioObject = document.getElementById("audioplayer");
+			if(typeof device != "undefined") {
+				if(device.platform == "Android") {
+					audioSource = "/android_asset/www/" + audioSource;
+					audioObject = new Media(audioSource, function() { audioObject.release(); }, onAudioError);
+				} else if(device.platform == "WinCE") {
+					audioSource = "/app/www/" + audioSource;
+					audioObject = new Media(audioSource, function() {  }, onAudioError);
+				} else {
+					audioObject = new Media(audioSource, function() {  }, onAudioError);	
+				}
+				audioObject.play();	
 			} else {
-				audio.play();
+				audioObject.play();
 			}
 		}
 	}
@@ -407,6 +413,7 @@
 			document.getElementById("overlay").style.visibility = "hidden";
 			document.getElementById("status").style.visibility = "visible";
 			document.getElementById("timer").style.visibility = "visible";
+			document.getElementById("playingfield").style.display = "table";
 			document.getElementById("playingfield").style.visibility = "visible";
 			document.getElementById("buttons").style.visibility = "visible";
 			
